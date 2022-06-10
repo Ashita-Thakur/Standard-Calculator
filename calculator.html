@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+.clear1{
+            width: 125px;
+        }
+        .input1{
+            width: 165px;
+            height: 30px;
+        }
+        input{
+            width: 40px;
+            height: 30px;
+        }
+        .heading{
+            /* margin-top: 20px; */
+            padding-top: 40px;
+            text-align: center;
+            /* background-color: aliceblue; */
+            width: 400px;
+            align-items: center;
+            margin-left: 470px;
+            font-weight:900;
+            font-size: larger;
+            color: dark grey;
+
+
+
+        }
+        .formstyle{
+            border: 1px solid black;
+            /* margin: 80px; */
+            margin-top: 30px;
+            margin-left: 565px;
+            width: 200px;
+            height: 300px;
+            align-items: center;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 8px;
+            background-color: aliceblue;
+        }
+        .image1{
+            width: 100%;
+            height: 120%;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: -1;
+            opacity: 0.85;
+            
+        }
+        body{
+            background-image: "./cal5.jpg";
+        }
+        *{
+            margin: 0;
+        }
+        .footer2{
+            /* margin-left: 900px; */
+            margin-top: 170px;
+            padding-right: 20px;
+            text-align:right;
+
+        }
+
+    </style>
+</head>
+<body>
+    <img src="./cal6.jpg" alt="calculator image" class="image1">
+    <div class="main">
+        
+        <div class="heading">
+            <h1>Standard Calculator</h1>
+        </div>
+    <div class="formstyle">
+        
+        <form name="forms">
+            <input type="text" name="inputItem1" class="input1" ><br><br>
+            <!-- <input type="text" name="inputItem2" ><br><br> -->
+            <input type="button" value=" 1 " onclick="forms.inputItem1.value += '1'">
+            <input type="button" value=" 2 " onclick="forms.inputItem1.value += '2'">
+            <input type="button" value=" 3 " onclick="forms.inputItem1.value += '3'">
+            <input type="button" value=" + " onclick="forms.inputItem1.value += '+'">
+            <br><br>
+            
+
+            <input type="button" value=" 4 " onclick="forms.inputItem1.value += '4'">
+            <input type="button" value=" 5 " onclick="forms.inputItem1.value += '5'">
+            <input type="button" value=" 6 " onclick="forms.inputItem1.value += '6'">
+            <input type="button" value=" - " onclick="forms.inputItem1.value += '-'">
+            <br><br>
+            
+
+            <input type="button" value=" 7 " onclick="forms.inputItem1.value += '7'">
+            <input type="button" value=" 8 " onclick="forms.inputItem1.value += '8'">
+            <input type="button" value=" 9 " onclick="forms.inputItem1.value += '9'">
+            <input type="button" value=" * " onclick="forms.inputItem1.value += '*'">
+            <br><br>
+            <input type="button" value=" / " onclick="forms.inputItem1.value += '/'">
+            <input type="button" value=" 0 " onclick="forms.inputItem1.value += '0'">
+            <input type="button" value=" % " onclick="forms.inputItem1.value += '%'">
+            <input type="button" value=" . " onclick="forms.inputItem1.value += '.'">
+            <br><br>
+    
+            <input type="button" value="Clear" class="clear1" onclick="fun2()">
+            <input type="button" value=" = " onclick="fun1()">
+        </form>
+    </div>
+    <div class="footer2">
+        Developed by: Ashita 
+    </div>
+</div>
+
+
+    <script>
+        function fun1(){
+            forms.inputItem1.value = eval(forms.inputItem1.value);
+            // forms.inputItem2.value=forms.inputItem1.value;
+        }
+        function fun2(){
+            forms.inputItem2.value='';
+            forms.inputItem1.value='';
+        }
+    </script>
+
+</body>
+</html>
